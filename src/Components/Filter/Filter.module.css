@@ -1,0 +1,8 @@
+.label {
+    display: grid;
+    grid-gap: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    width: max-content;
+}
