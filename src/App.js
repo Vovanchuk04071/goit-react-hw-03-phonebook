@@ -14,15 +14,8 @@ const contacts = [
 ];
 class App extends Component {
   state = {
-    contacts: [],
+    contacts: contacts,
     filter: "",
-    showModal: false,
-  };
-
-  toggleModal = () => {
-    this.setState(({ showModal }) => ({
-      showModal: !showModal,
-    }));
   };
 
   componentDidMount() {
@@ -91,24 +84,11 @@ class App extends Component {
   };
 
   render() {
-    const { filter, showModal } = this.state;
+    const { filter } = this.state;
     const visibleFilter = this.getVisibleContacts();
 
     return (
       <>
-        <button type="button" onClick={this.toggleModal}>
-          {" "}
-          Открыть модалку
-        </button>
-        {showModal && (
-          <Modal onClose={this.toggleModal}>
-            <p>Моя модалка</p>
-            <button type="button" onClick={this.toggleModal}>
-              закрыть
-            </button>
-          </Modal>
-        )}
-
         <div className={style.wraper}>
           <h1 className={style.title}>Phonebook</h1>
           <Form onSubmit={this.hendleFilteredContact} />

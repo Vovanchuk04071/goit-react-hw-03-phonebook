@@ -28,15 +28,6 @@ class Form extends Component {
     });
   };
 
-  // handleNumber = ({ target }) => {
-  //   const { value } = target;
-  //   this.setState(prevState => {
-  //     if (prevState.number.length === 4) {
-  //       return { number: ' ' + value };
-  //     }
-  //   });
-  // };
-
   reset = () => {
     this.setState({
       name: '',
